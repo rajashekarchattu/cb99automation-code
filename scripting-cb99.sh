@@ -2,18 +2,18 @@
 
 USERID=$(ID -U)
 
-if [ $USERID -ne 0]: then
+if [ $USERID -ne 0 ]: then
      echo "ERROR:: please run this cript with root privelege"
      exit 1 # failure is other than 0
 fi     
 
 dnf install mysql -y 
 
-if [$? -ne 0 ]; then 
+if [ $? -ne 0 ]; then 
     echo "ERROR:: Installing MySQL is failure"
     exit 1
 else 
-   echo "installing mysql is susses"
+    echo "installing mysql is susses"
 fi
 
 
