@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Running on Ubuntu 24.04"
+
 sudo apt update -y
 
 sudo apt install nginx -y
@@ -10,11 +12,11 @@ else
     echo "Installing nginx SUCCESS"
 fi
 
-sudo apt install mongodb-mongosh -y
+sudo apt install mysql -y
 if [ $? -ne 0 ]; then
-    echo "ERROR:: Installing mongodb-mongosh failed"
+    echo "ERROR:: Installing mysql failed"
     exit 1
 else
-    echo "Installing mongodb-mongosh SUCCESS"
+    echo "Installing mysql SUCCESS"
 fi
 
