@@ -1,6 +1,8 @@
 #!/bin/bash
 
-dnf install nginx -y
+sudo apt update -y
+
+sudo apt install nginx -y
 if [ $? -ne 0 ]; then
     echo "ERROR:: Installing nginx failed"
     exit 1
@@ -8,10 +10,11 @@ else
     echo "Installing nginx SUCCESS"
 fi
 
-dnf install mongodb-mongosh -y
+sudo apt install mongodb-mongosh -y
 if [ $? -ne 0 ]; then
     echo "ERROR:: Installing mongodb-mongosh failed"
     exit 1
 else
     echo "Installing mongodb-mongosh SUCCESS"
 fi
+
