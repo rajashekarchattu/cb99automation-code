@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USERID=$(ID -U)
+USERID=$(ID -u)
 
 if [ $USERID -ne 0 ]: then
      echo "ERROR:: please run this cript with root privelege"
