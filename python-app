@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Running on Ubuntu 24.04"
+
+sudo apt update -y
+
+# Install Python 3
+sudo apt install python3 -y
+if [ $? -ne 0 ]; then
+    echo "ERROR:: Installing Python3 failed"
+    exit 1
+else
+    echo "Installing Python3 SUCCESS"
+fi
